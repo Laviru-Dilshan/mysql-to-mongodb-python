@@ -98,3 +98,13 @@ It retrieves data from a specified table in MySQL and inserts it into a specifie
     python table_to_collection.py
     ```
 
+# COPYRIGHT
+
+All rights reserved by Laviru Dilshan Jr. 2024
+
+Connect with me:
+- GitHub: [https://github.com/Laviru-Dilshan](https://github.com/Laviru-Dilshan)
+- Twitter: [https://x.com/laviru_dilshan](https://x.com/laviru_dilshan)
+- LinkedIn: [https://www.linkedin.com/in/laviru-dilshan](https://www.linkedin.com/in/laviru-dilshan)
+- Facebook: [https://www.facebook.com/LaviruD](https://www.facebook.com/LaviruD)
+- Instagram: [https://www.instagram.com/lavirudilshan](https://www.instagram.com/lavirudilshan)

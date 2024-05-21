@@ -1,3 +1,15 @@
+"""
+All rights reserved by Laviru Dilshan Jr. 2024
+
+Connect with me:
+- GitHub: https://github.com/Laviru-Dilshan
+- Twitter: https://x.com/laviru_dilshan
+- LinkedIn: https://www.linkedin.com/in/laviru-dilshan
+- Facebook: https://www.facebook.com/LaviruD
+- Instagram: https://www.instagram.com/lavirudilshan
+
+"""
+
 from pymongo import MongoClient
 
 class MongoDBConnector:
