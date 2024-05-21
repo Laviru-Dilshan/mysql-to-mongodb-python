@@ -37,9 +37,16 @@ class MySQLToMongoConverter:
 # Define your field mappings for each table
 province_mapping = {
     "id": 0,
-    "name_en": 1,
-    "name_si": 2,
-    "name_ta": 3,
+    "district_id": 1,
+    "name_en": 2,
+    "name_si": 3,
+    "name_ta": 4,
+    "sub_name_en": 5,
+    "sub_name_si": 6,
+    "sub_name_ta": 7,
+    "postcode": 8,
+    "latitude": 9,
+    "longitude": 10
 }
 
 # Example usage
@@ -52,7 +59,8 @@ converter = MySQLToMongoConverter(
     },
     os.getenv('MONGO_URI'),
     os.getenv('MONGO_DATABASE'),
-    'provinces',
+    'cities',
     province_mapping
 )
 converter.convert()
+

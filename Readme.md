@@ -1,6 +1,6 @@
 # MySQL to MongoDB Data Converter
 
-This Python script allows you to convert data from a MySQL database to a MongoDB database. It retrieves data from a specified table in MySQL and inserts it into a specified collection in MongoDB, based on a mapping of fields between the two databases.
+This Python script allows you to convert data from a MySQL database to a MongoDB database.
 
 ## Getting Started
 
@@ -28,7 +28,44 @@ This Python script allows you to convert data from a MySQL database to a MongoDB
     MONGO_DATABASE=your_mongo_database
     ```
 
-4. **Open `main.py` and add your data mapping and collection name:**
+    (important: after add mongo uri add '/', example - "www.mongodb.com/")
+
+## Convert MySQL Database To MongoDB
+
+Using This You Can Convert Your Full MYSQL Database To MongoDB
+
+1. **Open `mysql_to_mongo.py` and add your sql config ,mongo uri and call functions:**
+
+    ```python
+    # Create MYSQL Config
+    sql_config = {
+        "host": os.getenv('SQL_HOST'),
+        "user": os.getenv('SQL_USER'),
+        "password": os.getenv('SQL_PASSWORD'),
+        "database": os.getenv('SQL_DATABASE'),
+    }
+
+    #add mondo db uri
+    mongo_uri = os.getenv('MONGO_URI')
+
+    # call functions
+    converter = MySQLToMongoConverter(sql_config, mongo_uri)
+    converter.convert()
+    ```
+
+2. **Run the script:**
+
+    ```bash
+    python mysql_to_mongo.py
+    ```
+
+
+## Convert MySql Single Table To Single Mongo Collection
+
+It retrieves data from a specified table in MySQL and inserts it into a specified collection in MongoDB, based on a mapping of fields between the two databases.
+
+
+1. **Open `table_to_collection.py` and add your data mapping and collection name:**
 
     ```python
     # Define your field mappings for each table
@@ -55,9 +92,9 @@ This Python script allows you to convert data from a MySQL database to a MongoDB
     converter.convert()
     ```
 
-5. **Run the script:**
+2. **Run the script:**
 
     ```bash
-    python main.py
+    python table_to_collection.py
     ```
 
